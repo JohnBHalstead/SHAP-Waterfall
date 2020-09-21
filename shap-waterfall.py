@@ -46,8 +46,6 @@ def ShapWaterFall(Model, X_tng, X_sc, cust1, cust2, num_feature):
     # Computations for Waterfall Chart
     data_for_prediction = pd.concat(frames)
     data_for_prediction = pd.DataFrame(data_for_prediction)
-
-    # data_for_prediction = data_for_prediction.drop('Customer', 1)
     feature_names = data_for_prediction.columns.values
     shap_values = explainer.shap_values(data_for_prediction)
     Feat_contrib = pd.DataFrame(list(map(np.ravel, shap_values[1])), columns=feature_names)
