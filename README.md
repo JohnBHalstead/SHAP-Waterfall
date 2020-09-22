@@ -8,15 +8,25 @@ Using pip (recommended)
     
 **Introduction**
 
-Many times when VMware Data Science Teams present their ML models' propensity to buy scores (estimated probabilities) to stakeholders,  stakeholders ask why a customer’s propensity to buy is higher than the other customer. Their question was our motivation.  Plus recent EU and US mandates that require machine learning model explainability became another motivation.
+Many times when VMware Data Science Teams present their Machine Learning models' propensity to buy scores (estimated probabilities) to stakeholders, stakeholders ask why a customer's propensity to buy is higher than the other customer. The stakeholder's question was our primary motivation. We were further motivated by recent algorithm transparency language in the EU's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Although the "right to explanation" is not necessarily clear, our desire is to act in good faith by providing local explainability between two observations, clients, customers.
 
-This graph solution provides a local classification model interruptibility between two observations, which we call customers. It uses each customer's estimated probability and fills the gap between the two probabilities with SHAP values that are ordered from higher to lower importance.
+This graph solution provides a local classification model interruptibility between two observations, which we call customers. It uses each customer's estimated probability and fills the gap between the two probabilities with SHAP values that are ordered from higher to lower importance. We prefer SHAP over others (for example, LIME) because of its concrete theory and ability to fairly distribute effects.
 
 Currently, this package only works for tree and tree ensemble classification models. Our decision to limit the use to tree methods was based on two considerations. We desired to take advantage of the tree explainer's speed. As a business practice, we tend to deploy Random Forest, XGBoost, LightGBM, and  other tree ensembles more often than other classifications methods.
 
-However, we plan on including the kernel explainer in future versions.
+However, we plan to include the kernel explainer in future versions.
 
 The package requires a tree classifier, training data, validation/test/scoring data with a column titled "Customer", the two observations of interest, and the desired number of important features. The package produces a Waterfall Chart. 
+
+ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
+
+**Required**
+
+*clf*: a tree based classifier that is fitted to X_tng, training data.
+*X_tng*: the training Data Frame used to fit the model.
+*X_val*: the validation, test, or scoring Data Frame under observation. Note that the data frame must contain an extra column who's label is "Customer".
+*observation1 and observation2*: the first observation, client, or customer under study. If the column data is a string, use "observation1". Otherwise, use an integer, i.e., 4 or 107, etc. 
+*num_features*: the number of important features that describe the local interpretability between to the two observations. 
 
 **Examples**
 
