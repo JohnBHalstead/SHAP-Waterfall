@@ -59,6 +59,14 @@ print(X_tng.shape) # (381, 30)
 
 print(X_val.shape) # (188, 30)
 
+X_tng = pd.DataFrame(X_tng)
+
+X_tng.columns = feature_names
+
+X_val = pd.DataFrame(X_val)
+
+X_val.columns = feature_names
+
 **fit classifiers and measure AUC**
 
 clf = rf_clf.fit(X_tng, y_tng)
@@ -83,9 +91,13 @@ print(X_val.shape) # (188, 31)
 
 ShapWaterFall(clf, X_tng, X_val, 5, 100, 5)
 
+ShapWaterFall(clf, X_tng, X_val, 100, 5, 7)
+
 **Use Case 2**
 
-ShapWaterFall(clf, X_tng, X_val, 2, 59, 5)
+ShapWaterFall(clf, X_tng, X_val, 36, 94, 5)
+
+ShapWaterFall(clf, X_tng, X_val, 94, 36, 7)
 
 **Authors**
 
