@@ -23,9 +23,13 @@ ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
 **Required**
 
 *clf*: a tree based classifier that is fitted to X_tng, training data.
+
 *X_tng*: the training Data Frame used to fit the model.
+
 *X_val*: the validation, test, or scoring Data Frame under observation. Note that the data frame must contain an extra column who's label is "Customer".
+
 *observation1 and observation2*: the first observation, client, or customer under study. If the column data is a string, use "observation1". Otherwise, use an integer, i.e., 4 or 107, etc. 
+
 *num_features*: the number of important features that describe the local interpretability between to the two observations. 
 
 **Examples**
