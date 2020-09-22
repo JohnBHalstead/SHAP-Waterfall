@@ -18,6 +18,8 @@ However, we plan to include the kernel explainer in future versions.
 
 The package requires a tree classifier, training data, validation/test/scoring data with a column titled "Customer", the two observations of interest, and the desired number of important features. The package produces a Waterfall Chart. 
 
+**Command**
+
 ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
 
 **Required**
@@ -35,6 +37,7 @@ ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
 **Examples**
 
 **Scikit-Learn WI Breast Cancer Data Example**
+
 **packages**
 
 import pandas as pd
