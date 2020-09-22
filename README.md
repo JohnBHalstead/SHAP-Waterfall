@@ -34,6 +34,7 @@ ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
 
 **Examples**
 
+**Scikit-Learn WI Breast Cancer Data Example**
 **packages**
 
 import pandas as pd
@@ -115,6 +116,83 @@ ShapWaterFall(clf, X_tng, X_val, 36, 94, 5)
 
 ShapWaterFall(clf, X_tng, X_val, 94, 36, 7)
 
+**University of California, Irvine House Votes 84 data**
+
+**packages**
+
+import pandas as pd
+
+import numpy as np
+
+from sklearn.datasets import load_breast_cancer
+
+from sklearn.ensemble import RandomForestClassifier
+
+from sklearn.metrics import roc_auc_score
+
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
+
+import ship-waterfall
+
+**models**
+
+rf_clf = RandomForestClassifier()
+
+**UCI Data **
+
+df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/voting-records/house-votes-84.data')
+
+names = ['Republican', 'handicap infants', 'water project', 'budget resolution', 'physician fee freeze', 'el salvador aide', 'school religious groups', 'anti satellite', 'nicaraguan contras', 'mx missle', 'immigration', 'synfuels', 'education spending', 'superfund', 'crime', 'duty free exports', 'south africa']
+
+df.columns = names
+
+df = df.replace(to_replace =["republican", "y"], value = 1) 
+
+df = df.replace(to_replace =["democrat", "n", "?"], value = 0) 
+
+label = df.iloc[:,0]
+
+features = df.iloc[:,1:17]
+
+**data splits**
+X_tng, X_val, y_tng, y_val = train_test_split(features, label, test_size=0.33, random_state=42)
+
+print(X_tng.shape)
+
+print(X_val.shape)
+
+**fit classifiers and measure AUC**
+
+clf = rf_clf.fit(X_tng, y_tng)
+
+pred_rf = clf.predict_proba(X_val)
+
+score_rf = roc_auc_score(y_val,pred_rf[:,1])
+
+print(score_rf, 'Random Forest AUC')
+
+*0.99238683127572 Random Forest AUC*
+
+**IMPORTANT: add a 'Customer' column to the val/test/score data**
+
+X_val = pd.DataFrame(X_val)
+
+X_val['Customer'] = X_val.index
+
+print(X_val.shape)
+
+**Use Case 3**
+
+ShapWaterFall(clf, X_tng, X_val, 78, 387, 5)
+
+ShapWaterFall(clf, X_tng, X_val, 387, 78, 7)
+
+**Use Case 4**
+
+ShapWaterFall(clf, X_tng, X_val, 253, 157, 5)
+
+ShapWaterFall(clf, X_tng, X_val, 157, 253, 7)
+
 **Authors**
 
 John Halstead, jhalstead@vmware.com
@@ -125,5 +203,45 @@ Rajesh Vikraman, rvikraman@vmware.com
 
 Kiran R, rki@vmware.com
 
+**References**
 
+1) Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml/machine-learning-databases/voting-records/house-votes-84.data]. Irvine, CA: University of California, School of Information and Computer Science.
+
+2) Kaloyan Iliev and Sayan Putatunda, “SHAP and LIME Model Interpretability”, VMware EDA AA & DS CoE PowerPoint Presentation, Palo Alto, CA, USA, November 21, 2019.
+
+3) Dr. Dataman, “Explain Your Model with the SHAP Values”, Medium: Towards Data Science, available at https://towardsdatascience.com/explain-your-model-with-the-shap-values-bc36aac4de3d, September 13, 2019.
+
+4) Sean Gillies, “The Shapely User Manual”, Shapely 1.8dev documentation, available at https://shapely.readthedocs.io/en/latest/manual.html, July 15, 2020.
+
+5) Ashutosh Nayak, “Idea Behind LIME and SHAP: the intuition behind ML interpretation models”, Medium: Towards Data Science, available at https://towardsdatascience.com/idea-behind-lime-and-shap-b603d35d34eb, December 22, 2019.
+
+6) Christoph Molnar, “Interpretable Machine Learning: a Guide for Making Black Box Models Explainable”, E-book available at https://christophm.github.io/interpretable-ml-book/, updated July 20, 2020, Chapters 5.7 (Local Surrogate (LIME)) and 5.10. (SHAP (SHapley Additive exPlanations)).
+
+7) Scott Lundberg, “SHAP Explainers and Plots”, available at https://shap.readthedocs.io/en/latest/#, 2018.
+
+8) Sean Owen, “Detecting Data Bias Using SHAP and Machine Learning: What Machine Learning and SHAP Can Tell Us about the Relationship between Developer Salaries and the Gender Pay Gap”, Databricks, available at https://databricks.com/blog/2019/06/17/detecting-bias-with-shap.html, June 17, 2019.
+
+9) Chris Moffit, “Creating a Waterfall Chart in Python”, Practical Business Python, available at https://pbpython.com/waterfall-chart.html, November 18, 2014.
+
+10) Abhishek Sharma, “Decrypting your Machine Learning model using LIME: why should you trust your model?”, Medium: Towards Data Science, available at: https://towardsdatascience.com/decrypting-your-machine-learning-model-using-lime-5adc035109b5, November 4, 2018.
+
+11) Marco Tulio Ribeiro, “LIME Documentation, Release 0.1”, available at https://buildmedia.readthedocs.org/media/pdf/lime-ml/latest/lime-ml.pdf, August 10, 2017.
+
+12) Lars Hulstaert, “Understanding model predictions with LIME”, Medium: Towards Data Science, available at https://towardsdatascience.com/understanding-model-predictions-with-lime-a582fdff3a3b, July 11, 2018.
+
+13) Ando Saabas, “treeinterpreter 0.2.2”, PyPl, available at https://pypi.org/project/treeinterpreter/, July 22, 2015.
+
+14) Ando Saabas, “Random forest interpretation with scikit-learn”, Diving into Data: A blog on machine learning, data mining and visualization, available at http://blog.datadive.net/random-forest-interpretation-with-scikit-learn/, August 12, 2015.
+
+15) Manpreet Singh, Kiran R, and Stephen Harris, “Corona Impact: VMW Bookings and Propensity Models”, Vmware EDA AA & DS CoE PowerPoint Presentation, Palo Alto, CA, USA, 2019.
+
+16) Scott M. Lundberg, Su-In Lee, “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA, 2016.
+
+17) Lundberg, S., Lee, S., “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA. 
+
+18) Bowen, D., Ungar, L., “Generalized SHAP: Generating multiple types of explanations in machine learning”, Pre-print, June 15, 2020.
+
+19) Veder, K., “An Overview of SHAP-based Feature Importance Measures and Their Applications To Classification”, Pre-print, May 8, 2020.
+
+20) Lundberg, S., Erion, G., Lee, S., “Consistent Individualized Feature Attribution for Tree Ensembles”, Pre-print, March 7, 2019.
  
