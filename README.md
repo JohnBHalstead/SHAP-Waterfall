@@ -238,10 +238,8 @@ Kiran R, rki@vmware.com
 
 16) Lundberg, S., Lee, S. (2017). “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems, Long Beach, CA, USA.
 
-17) Lundberg, S., Lee, S.(2017). “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems, Long Beach, CA, USA. 
+17) Bowen, D., Ungar, L., (2020). “Generalized SHAP: Generating multiple types of explanations in machine learning”, Pre-print, June 15, 2020.
 
-18) Bowen, D., Ungar, L., (2020). “Generalized SHAP: Generating multiple types of explanations in machine learning”, Pre-print, June 15, 2020.
+18) Veder, K. (2020). “An Overview of SHAP-based Feature Importance Measures and Their Applications To Classification”, Pre-print, May 8, 2020.
 
-19) Veder, K. (2020). “An Overview of SHAP-based Feature Importance Measures and Their Applications To Classification”, Pre-print, May 8, 2020.
-
-20) Lundberg, S., Erion, G., Lee, S. (2019). “Consistent Individualized Feature Attribution for Tree Ensembles”, Pre-print, March 7, 2019.
+19) Lundberg, S., Erion, G., Lee, S. (2019). “Consistent Individualized Feature Attribution for Tree Ensembles”, Pre-print, March 7, 2019.
