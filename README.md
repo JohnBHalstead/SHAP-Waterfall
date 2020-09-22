@@ -138,7 +138,7 @@ import ship-waterfall
 
 rf_clf = RandomForestClassifier()
 
-**UCI Data **
+**UCI Data**
 
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/voting-records/house-votes-84.data')
 
