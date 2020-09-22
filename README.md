@@ -155,6 +155,7 @@ label = df.iloc[:,0]
 features = df.iloc[:,1:17]
 
 **data splits**
+
 X_tng, X_val, y_tng, y_val = train_test_split(features, label, test_size=0.33, random_state=42)
 
 print(X_tng.shape)
