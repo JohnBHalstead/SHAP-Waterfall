@@ -35,6 +35,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split, RandomizedSearchCV
 
 **models**
+
 rf_clf = RandomForestClassifier(n_estimators=1666, max_features="auto", min_samples_split=2, min_samples_leaf=2,
                                 max_depth=20, bootstrap=True, n_jobs=1)
 
@@ -51,6 +52,7 @@ feature_names = data['feature_names']
 features = data['data']
 
 **data splits**
+
 X_tng, X_val, y_tng, y_val = train_test_split(features, labels, test_size=0.33, random_state=42)
 
 print(X_tng.shape) # (381, 30)
@@ -58,6 +60,7 @@ print(X_tng.shape) # (381, 30)
 print(X_val.shape) # (188, 30)
 
 **fit classifiers and measure AUC**
+
 clf = rf_clf.fit(X_tng, y_tng)
 
 pred_rf = clf.predict_proba(X_val)
@@ -77,9 +80,11 @@ X_val['Customer'] = X_val.index
 print(X_val.shape) # (188, 31)
 
 **Use Case 1**
+
 ShapWaterFall(clf, X_tng, X_val, 5, 100, 5)
 
 **Use Case 2**
+
 ShapWaterFall(clf, X_tng, X_val, 2, 59, 5)
 
 **Authors**
