@@ -205,43 +205,42 @@ Kiran R, rki@vmware.com
 
 **References**
 
-1) Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml/machine-learning-databases/voting-records/house-votes-84.data]. Irvine, CA: University of California, School of Information and Computer Science.
+1) Dua, D., Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml/machine-learning-databases/voting-records/house-votes-84.data]. Irvine, CA: University of California, School of Information and Computer Science.
 
-2) Kaloyan Iliev and Sayan Putatunda, “SHAP and LIME Model Interpretability”, VMware EDA AA & DS CoE PowerPoint Presentation, Palo Alto, CA, USA, November 21, 2019.
+2) Iliev, K., Putatunda, S. (2019). “SHAP and LIME Model Interpretability”, VMware EDA AA & DS CoE PowerPoint Presentation, Palo Alto, CA, USA.
 
-3) Dr. Dataman, “Explain Your Model with the SHAP Values”, Medium: Towards Data Science, available at https://towardsdatascience.com/explain-your-model-with-the-shap-values-bc36aac4de3d, September 13, 2019.
+3) Dataman, D. (2019). “Explain Your Model with the SHAP Values”, Medium: Towards Data Science, available at https://towardsdatascience.com/explain-your-model-with-the-shap-values-bc36aac4de3d.
 
-4) Sean Gillies, “The Shapely User Manual”, Shapely 1.8dev documentation, available at https://shapely.readthedocs.io/en/latest/manual.html, July 15, 2020.
+4) Gillies, S. (2020). “The Shapely User Manual”, Shapely 1.8dev documentation, available at https://shapely.readthedocs.io/en/latest/manual.html.
 
-5) Ashutosh Nayak, “Idea Behind LIME and SHAP: the intuition behind ML interpretation models”, Medium: Towards Data Science, available at https://towardsdatascience.com/idea-behind-lime-and-shap-b603d35d34eb, December 22, 2019.
+5) Nayak, A. (2019). “Idea Behind LIME and SHAP: the intuition behind ML interpretation models”, Medium: Towards Data Science, available at https://towardsdatascience.com/idea-behind-lime-and-shap-b603d35d34eb.
 
-6) Christoph Molnar, “Interpretable Machine Learning: a Guide for Making Black Box Models Explainable”, E-book available at https://christophm.github.io/interpretable-ml-book/, updated July 20, 2020, Chapters 5.7 (Local Surrogate (LIME)) and 5.10. (SHAP (SHapley Additive exPlanations)).
+6) Molnar, C. (2020). “Interpretable Machine Learning: a Guide for Making Black Box Models Explainable”, E-book available at https://christophm.github.io/interpretable-ml-book/, updated July 20, 2020, Chapters 5.7 (Local Surrogate (LIME)) and 5.10. (SHAP (SHapley Additive exPlanations)).
 
-7) Scott Lundberg, “SHAP Explainers and Plots”, available at https://shap.readthedocs.io/en/latest/#, 2018.
+7) Lundberg, S. (2018). “SHAP Explainers and Plots”, available at https://shap.readthedocs.io/en/latest/#.
 
-8) Sean Owen, “Detecting Data Bias Using SHAP and Machine Learning: What Machine Learning and SHAP Can Tell Us about the Relationship between Developer Salaries and the Gender Pay Gap”, Databricks, available at https://databricks.com/blog/2019/06/17/detecting-bias-with-shap.html, June 17, 2019.
+8) Owen, S. (2019). “Detecting Data Bias Using SHAP and Machine Learning: What Machine Learning and SHAP Can Tell Us about the Relationship between Developer Salaries and the Gender Pay Gap”, Databricks, available at https://databricks.com/blog/2019/06/17/detecting-bias-with-shap.html.
 
-9) Chris Moffit, “Creating a Waterfall Chart in Python”, Practical Business Python, available at https://pbpython.com/waterfall-chart.html, November 18, 2014.
+9) Moffit, C. (2014). “Creating a Waterfall Chart in Python”, Practical Business Python, available at https://pbpython.com/waterfall-chart.html.
 
-10) Abhishek Sharma, “Decrypting your Machine Learning model using LIME: why should you trust your model?”, Medium: Towards Data Science, available at: https://towardsdatascience.com/decrypting-your-machine-learning-model-using-lime-5adc035109b5, November 4, 2018.
+10) Sharma, A. (2018). “Decrypting your Machine Learning model using LIME: why should you trust your model?”, Medium: Towards Data Science, available at: https://towardsdatascience.com/decrypting-your-machine-learning-model-using-lime-5adc035109b5.
 
-11) Marco Tulio Ribeiro, “LIME Documentation, Release 0.1”, available at https://buildmedia.readthedocs.org/media/pdf/lime-ml/latest/lime-ml.pdf, August 10, 2017.
+11) Ribeiro, MT. (2017). “LIME Documentation, Release 0.1”, available at https://buildmedia.readthedocs.org/media/pdf/lime-ml/latest/lime-ml.pdf.
 
-12) Lars Hulstaert, “Understanding model predictions with LIME”, Medium: Towards Data Science, available at https://towardsdatascience.com/understanding-model-predictions-with-lime-a582fdff3a3b, July 11, 2018.
+12) Hulstaert, L. (2018). “Understanding model predictions with LIME”, Medium: Towards Data Science, available at https://towardsdatascience.com/understanding-model-predictions-with-lime-a582fdff3a3b.
 
-13) Ando Saabas, “treeinterpreter 0.2.2”, PyPl, available at https://pypi.org/project/treeinterpreter/, July 22, 2015.
+13) Saabas, A. (2015). “treeinterpreter 0.2.2”, PyPl, available at https://pypi.org/project/treeinterpreter/.
 
-14) Ando Saabas, “Random forest interpretation with scikit-learn”, Diving into Data: A blog on machine learning, data mining and visualization, available at http://blog.datadive.net/random-forest-interpretation-with-scikit-learn/, August 12, 2015.
+14) Saabas, A. (2015). “Random forest interpretation with scikit-learn”, Diving into Data: A blog on machine learning, data mining and visualization, available at http://blog.datadive.net/random-forest-interpretation-with-scikit-learn/.
 
-15) Manpreet Singh, Kiran R, and Stephen Harris, “Corona Impact: VMW Bookings and Propensity Models”, Vmware EDA AA & DS CoE PowerPoint Presentation, Palo Alto, CA, USA, 2019.
+15) Singh, M., Kiran R, Harris, S. (2019). “Corona Impact: VMW Bookings and Propensity Models”, Vmware EDA AA & DS CoE PowerPoint Presentation, Palo Alto, CA, USA.
 
-16) Scott M. Lundberg, Su-In Lee, “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA, 2016.
+16) Lundberg, S., Lee, S. (2017). “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems, Long Beach, CA, USA.
 
-17) Lundberg, S., Lee, S., “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA. 
+17) Lundberg, S., Lee, S.(2017). “A Unified Approach to Interpreting Model Predictions”, 31st Conference on Neural Information Processing Systems, Long Beach, CA, USA. 
 
-18) Bowen, D., Ungar, L., “Generalized SHAP: Generating multiple types of explanations in machine learning”, Pre-print, June 15, 2020.
+18) Bowen, D., Ungar, L., (2020). “Generalized SHAP: Generating multiple types of explanations in machine learning”, Pre-print, June 15, 2020.
 
-19) Veder, K., “An Overview of SHAP-based Feature Importance Measures and Their Applications To Classification”, Pre-print, May 8, 2020.
+19) Veder, K. (2020). “An Overview of SHAP-based Feature Importance Measures and Their Applications To Classification”, Pre-print, May 8, 2020.
 
-20) Lundberg, S., Erion, G., Lee, S., “Consistent Individualized Feature Attribution for Tree Ensembles”, Pre-print, March 7, 2019.
- 
+20) Lundberg, S., Erion, G., Lee, S. (2019). “Consistent Individualized Feature Attribution for Tree Ensembles”, Pre-print, March 7, 2019.
