@@ -8,7 +8,7 @@ Using pip (recommended)
     
 **Introduction**
 
-Many times when VMware Data Science Teams present their ML models' propensity to buy scores (estimated probabilities) to stakeholders,  stakeholders ask why a customer’s propensity to buy is higher than the other customer. Their question was our motivation.  Plus recent EU and US mandates that direct machine learning model explainability became another motivation.
+Many times when VMware Data Science Teams present their ML models' propensity to buy scores (estimated probabilities) to stakeholders,  stakeholders ask why a customer’s propensity to buy is higher than the other customer. Their question was our motivation.  Plus recent EU and US mandates that require machine learning model explainability became another motivation.
 
 This graph solution provides a local classification model interruptibility between two observations, which we call customers. It uses each customer's estimated probability and fills the gap between the two probabilities with SHAP values that are ordered from higher to lower importance.
 
