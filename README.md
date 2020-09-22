@@ -48,6 +48,8 @@ from sklearn.metrics import roc_auc_score
 
 from sklearn.model_selection import train_test_split, RandomizedSearchCV
 
+import shap-waterfall
+
 **models**
 
 rf_clf = RandomForestClassifier(n_estimators=1666, max_features="auto", min_samples_split=2, min_samples_leaf=2,
