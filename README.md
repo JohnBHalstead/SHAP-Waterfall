@@ -8,9 +8,11 @@ Using pip (recommended)
     
 **Introduction**
 
-Many times when VMware Data Science Teams present their Machine Learning models' propensity to buy scores (estimated probabilities) to stakeholders, stakeholders ask why a customer's propensity to buy is higher than the other customer. The stakeholder's question was our primary motivation. We were further motivated by recent algorithm transparency language in the EU's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Although the "right to explanation" is not necessarily clear, our desire is to act in good faith by providing local explainability between two observations, clients, and customers.
+Many times when VMware Data Science Teams present their Machine Learning models' propensity to buy scores (estimated probabilities) to stakeholders, stakeholders ask why a customer's propensity to buy is higher than the other customer. The stakeholder's question was our primary motivation. 
 
-This graph solution provides a local classification model interpretability between two observations, which we call customers. It uses each customer's estimated probability and fills the gap between the two probabilities with SHAP values that are ordered from higher to lower importance. We prefer SHAP over others (for example, LIME) because of its concrete theory and ability to fairly distribute effects.
+We were further concerned with recent algorithm transparency language in the EU's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Although the "right to explanation" is not necessarily clear, our desire is to act in good faith by providing local explainability and interpretability between two references, observations, clients, and customers.
+
+This graph solution provides a local classification model interpretability between two observations, which internally we call customers. It uses each customer's estimated probability and fills the gap between the two probabilities with SHAP values that are ordered from higher to lower importance. We prefer SHAP over others (for example, LIME) because of its concrete theory and ability to fairly distribute effects.
 
 Currently, this package only works for tree and tree ensemble classification models. Our decision to limit the use to tree methods was based on two considerations. We desired to take advantage of the tree explainer's speed. As a business practice, we tend to deploy Random Forest, XGBoost, LightGBM, and  other tree ensembles more often than other classifications methods.
 
