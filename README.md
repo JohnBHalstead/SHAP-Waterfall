@@ -16,11 +16,11 @@ Currently, this package only works for tree and tree ensemble classification mod
 
 However, we plan to include the kernel explainer in future versions.
 
-The package requires a tree classifier, training data, validation/test/scoring data with a column titled "Customer", the two observations of interest, and the desired number of important features. The package produces a Waterfall Chart. 
+The package requires a tree classifier, training data, validation/test/scoring data with a column titled "Reference", the two observations of interest, and the desired number of important features. The package produces a Waterfall Chart. 
 
 **Command**
 
-ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
+ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 
 **Required**
 
@@ -30,7 +30,7 @@ ShapWaterFall(*clf, X_tng, X_val, observation1, observation2, num_features*)
 
 *X_val*: the validation, test, or scoring Data Frame under observation. Note that the data frame must contain an extra column who's label is "Customer".
 
-*observation1 and observation2*: the first observation, client, or customer under study. If the column data is a string, use "observation1". Otherwise, use an integer, i.e., 4 or 107, etc. 
+*ref1 and ref2*: the first and second reference, observation, client, or customer under study. Can either be a string or an integer. If the column data is a string, use "ref1" and "ref2. Otherwise, use an integer, such as 4 or 107.  
 
 *num_features*: the number of important features that describe the local interpretability between to the two observations. 
 
@@ -99,11 +99,11 @@ print(score_rf, 'Random Forest AUC')
 
 *0.9951893425434809 Random Forest AUC*
 
-**IMPORTANT: add a 'Customer' column to the val/test/score data**
+**IMPORTANT: add a 'Reference' column to the val/test/score data**
 
 X_val = pd.DataFrame(X_val)
 
-X_val['Customer'] = X_val.index
+X_val['Reference'] = X_val.index
 
 print(X_val.shape) # (188, 31)
 
@@ -177,11 +177,11 @@ print(score_rf, 'Random Forest AUC')
 
 *0.99238683127572 Random Forest AUC*
 
-**IMPORTANT: add a 'Customer' column to the val/test/score data**
+**IMPORTANT: add a 'Reference' column to the val/test/score data**
 
 X_val = pd.DataFrame(X_val)
 
-X_val['Customer'] = X_val.index
+X_val['Reference'] = X_val.index
 
 print(X_val.shape)
 
