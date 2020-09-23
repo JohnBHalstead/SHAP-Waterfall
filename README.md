@@ -93,7 +93,7 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 	from sklearn.ensemble import RandomForestClassifier
 	from sklearn.metrics import roc_auc_score
 	from sklearn.model_selection import train_test_split, RandomizedSearchCV
-	import ship-waterfall
+	import shap-waterfall
 
 	# models
 	rf_clf = RandomForestClassifier()
@@ -123,7 +123,7 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 	score_rf = roc_auc_score(y_val,pred_rf[:,1])
 	print(score_rf, 'Random Forest AUC')
 
-	*0.99238683127572 Random Forest AUC*
+	# 0.99238683127572 Random Forest AUC
 
 	# IMPORTANT: add a 'Reference' column to the val/test/score data
 	X_val = pd.DataFrame(X_val)
