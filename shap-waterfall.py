@@ -1,13 +1,8 @@
-# SHAP Waterfall artifact
-#
-# Warning: Scoring df must have Customer ID column named "Customer".
-#
-# Inputs are: 1) Trained model (object) and data (dataframe),
-# 2) Scoring features indexed with Customer ID (dataframe),
-# 3) Clients for Comparison (strings), and 4) Number of Important Features desired (Integer)
-# Output is a waterfall chart
+# shap-waterfall
+# version 0.0.1 (September 23, 2020)
+# Principle author: John Halstead, jhalstead@vmware.com
 
-def ShapWaterFall(Model, X_tng, X_sc, cust1, cust2, num_feature):
+def ShapWaterFall(Model, X_tng, X_sc, ref1, ref2, num_feature):
     import pandas as pd
     import numpy as np
     import shap
@@ -15,7 +10,7 @@ def ShapWaterFall(Model, X_tng, X_sc, cust1, cust2, num_feature):
     import waterfall_chart
 
     # label names until we figure out how sql alchemy can fully work on Linux
-    clients_to_show = [cust1, cust2]
+    clients_to_show = [ref1, ref2]
 
     # Data Frame management
     if isinstance(X_sc, pd.DataFrame):
@@ -32,16 +27,16 @@ def ShapWaterFall(Model, X_tng, X_sc, cust1, cust2, num_feature):
 
     # Data
     data_for_prediction1 = X_v[(X_v.Customer == clients_to_show[0])]
-    data_for_prediction1 = data_for_prediction1.drop('Customer', 1)
+    data_for_prediction1 = data_for_prediction1.drop('Reference', 1)
     data_for_prediction2 = X_v[(X_v.Customer == clients_to_show[1])]
-    data_for_prediction2 = data_for_prediction2.drop('Customer', 1)
+    data_for_prediction2 = data_for_prediction2.drop('Reference', 1)
 
     # Insert a binary option to ensure order goes from lower to higher propensity
     if Model.predict_proba(data_for_prediction1)[:, 1] <= Model.predict_proba(data_for_prediction2)[:, 1]:
         frames = [data_for_prediction1, data_for_prediction2]
     else:
         frames = [data_for_prediction2, data_for_prediction1]
-        clients_to_show = [cust2, cust1]
+        clients_to_show = [ref2, ref1]
 
     # Computations for Waterfall Chart
     data_for_prediction = pd.concat(frames)
