@@ -2,7 +2,7 @@
 
 Using pip (recommended)
     
-    pip install shap-waterfall
+    pip install shap_waterfall
     
 **Introduction**
 
@@ -32,6 +32,8 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 
 **Examples**
 
+# Random Forest on WI Breast Cancer Data
+
 	# Scikit-Learn WI Breast Cancer Data Example
 	# packages
 	import pandas as pd
@@ -40,7 +42,7 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 	from sklearn.ensemble import RandomForestClassifier
 	from sklearn.metrics import roc_auc_score
 	from sklearn.model_selection import train_test_split, RandomizedSearchCV
-	import shap-waterfall
+	import shap_waterfall
 
 	# models
 	rf_clf = RandomForestClassifier(n_estimators=1666, max_features="auto", min_samples_split=2, min_samples_leaf=2,
@@ -84,8 +86,10 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 	# Use Case 2
 	ShapWaterFall(clf, X_tng, X_val, 36, 94, 5)
 	ShapWaterFall(clf, X_tng, X_val, 94, 36, 7)
+	
+# Random Forest on UCI House Vote Data
 
-	# University of California, Irvine House Votes 84 data Example
+	# University of California, Irvine House Votes Data Example
 	# packages
 	import pandas as pd
 	import numpy as np
@@ -93,7 +97,7 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 	from sklearn.ensemble import RandomForestClassifier
 	from sklearn.metrics import roc_auc_score
 	from sklearn.model_selection import train_test_split, RandomizedSearchCV
-	import shap-waterfall
+	import shap_waterfall
 
 	# models
 	rf_clf = RandomForestClassifier()
