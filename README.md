@@ -32,7 +32,7 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 
 **Examples**
 
-# Random Forest on WI Breast Cancer Data
+**Random Forest on WI Breast Cancer Data**
 
 	# Scikit-Learn WI Breast Cancer Data Example
 	# packages
@@ -87,7 +87,7 @@ ShapWaterFall(*clf, X_tng, X_val, ref1, ref2, num_features*)
 	ShapWaterFall(clf, X_tng, X_val, 36, 94, 5)
 	ShapWaterFall(clf, X_tng, X_val, 94, 36, 7)
 	
-# Random Forest on UCI House Vote Data
+**Random Forest on UCI House Vote Data**
 
 	# University of California, Irvine House Votes Data Example
 	# packages
